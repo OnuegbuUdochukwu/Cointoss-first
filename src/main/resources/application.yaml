@@ -2,9 +2,8 @@ spring:
   application:
     name: Cointoss
 
-
   datasource:
-    url: jdbc:postgresql://localhost:5432/cointoss
+    url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
@@ -14,7 +13,6 @@ spring:
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
     baseline-on-migrate: true
-
 
   jpa:
     hibernate:
