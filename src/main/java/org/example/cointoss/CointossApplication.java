@@ -9,7 +9,12 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class CointossApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CointossApplication.class, args);
+    // Debug: Print DB_URL at startup
+    String dbUrl = System.getenv("DB_URL");
+    System.out.println("\n==============================");
+    System.out.println("DB_URL at startup: " + dbUrl);
+    System.out.println("==============================\n");
+    SpringApplication.run(CointossApplication.class, args);
     }
 
 }
